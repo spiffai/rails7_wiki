@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+WikiPost.create!(title: 'What is MCP? Is it an API?')
+WikiPost.create!(title: 'RAG Concepts and Scalability')
+WikiPost.create!(title: 'AI Chat Bots in Rails')
+WikiPost.create!(title: 'What is Database Normalization?')
+WikiPost.create!(title: 'MVC VS MVVM')
+WikiPost.create!(title: 'Localization for Your Rails app')
+WikiPost.create!(title: 'S3 Storage and Architecture')
+WikiPost.create!(title: 'Caching Strategies for Your Rails App')
+WikiPost.create!(title: 'Best Practices for Rails Security')
+WikiPost.create!(title: 'What is a Vector Database?')
+
