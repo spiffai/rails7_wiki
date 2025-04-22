@@ -30,7 +30,7 @@ class WikiPostsController < ApplicationController
 
     respond_to do |format|
       if @wiki_post.save
-        format.html { redirect_to @wiki_post, notice: "Wiki post was successfully created." }
+        format.html { redirect_to @wiki_post, notice: "Your post was successfully created." }
         format.json { render :show, status: :created, location: @wiki_post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class WikiPostsController < ApplicationController
   def update
     respond_to do |format|
       if @wiki_post.update(wiki_post_params)
-        format.html { redirect_to @wiki_post, notice: "Wiki post was successfully updated." }
+        format.html { redirect_to @wiki_post, notice: "Your post was successfully updated." }
         format.json { render :show, status: :ok, location: @wiki_post }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class WikiPostsController < ApplicationController
     @wiki_post.destroy!
 
     respond_to do |format|
-      format.html { redirect_to wiki_posts_path, status: :see_other, notice: "Wiki post was successfully destroyed." }
+      format.html { redirect_to wiki_posts_path, status: :see_other, notice: "Your post was successfully destroyed." }
       format.json { head :no_content }
     end
   end
