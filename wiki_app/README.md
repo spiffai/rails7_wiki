@@ -1,24 +1,70 @@
-# README
+# Rails 7 Wiki Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A modern wiki application built with Ruby on Rails 7, allowing users to create, edit, and manage wiki posts.
 
-Things you may want to cover:
+## System Requirements
 
-* Ruby version
+- Ruby 3.2.2
+- Rails 7.1.3
+- PostgreSQL
 
-* System dependencies
+## Setup
 
-* Configuration
+1. Clone the repository:
+```bash
+git clone [your-repo-url]
+cd wiki_app
+```
 
-* Database creation
+2. Install dependencies:
+```bash
+bundle install
+```
 
-* Database initialization
+3. Database setup:
+```bash
+rails db:create
+rails db:migrate
+```
 
-* How to run the test suite
+4. Start the server:
+```bash
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+The application will be available at http://localhost:3000
 
-* Deployment instructions
+## Features
 
-* ...
+- Wiki post creation and management
+- Markdown support for content
+- Clean and intuitive interface
+- RESTful architecture
+
+## Development
+
+### Running Tests
+```bash
+rails test
+```
+
+### Code Style
+This project follows Ruby on Rails best practices and conventions.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Built with Ruby on Rails
+- Uses PostgreSQL for database management
+- Frontend styled with modern CSS
