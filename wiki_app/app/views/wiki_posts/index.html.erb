@@ -4,7 +4,7 @@
 
 <div id="wiki_posts">
     <table class="table" style="border: 1px solid #ccc">
-        <thead>
+        <thead >
             <tr>
                 <th>Title</th>
                 <th>Created At</th>
@@ -14,7 +14,7 @@
         <tbody>
             <% @wiki_posts.each do |post| %>
                 <tr>
-                    <td><%= post.title %></td>
+                    <td><%= link_to post.title, wiki_post_path(post), class: "text-blue-600 hover:text-blue-800" %></td>
                     <td><%= post.created_at.strftime('%B %d %Y') %></td>
                     <td><%= post.updated_at.strftime('%B %d %Y') %></td>
                 </tr>
