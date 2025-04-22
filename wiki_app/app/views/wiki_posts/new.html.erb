@@ -1,9 +1,19 @@
-<h1>New wiki post</h1>
+<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+  <h1 style="text-align: center;">New Post</h1>
 
-<%= render "form", wiki_post: @wiki_post %>
+  <%= form_with model: @wiki_post, local: true do |form| %>
+    <div style="margin-bottom: 20px;">
+      <%= form.label :title, style: "display: block; margin-bottom: 5px;" %>
+      <%= form.text_field :title, style: "width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" %>
+    </div>
 
-<br>
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+      <%= form.submit "Create", style: "background-color: #198754; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; min-width: 120px;" %>
+    </div>
+  <% end %>
 
-<div>
-  <%= link_to "Back to wiki posts", wiki_posts_path %>
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <%= link_to "Back to Listing", wiki_posts_path, 
+        style: "background-color: #6c757d; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;" %>
+  </div>
 </div>
