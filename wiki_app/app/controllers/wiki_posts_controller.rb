@@ -11,6 +11,10 @@ class WikiPostsController < ApplicationController
     @wiki_post = WikiPost.find(params[:id])
   end
 
+  def example
+    render :example
+  end
+
   # GET /wiki_posts/new
   def new
     @wiki_post = WikiPost.new
