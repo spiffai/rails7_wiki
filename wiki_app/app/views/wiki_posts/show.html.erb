@@ -1,8 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1><%= @wiki_post.title %></h1>
-
-<%= render @wiki_post %>
+<p>- Created on <%= @wiki_post.created_at.strftime('%B %d %Y %I:%M %p') %></p>
 
 <div>
   <%= link_to "Edit this wiki post", edit_wiki_post_path(@wiki_post) %> |
