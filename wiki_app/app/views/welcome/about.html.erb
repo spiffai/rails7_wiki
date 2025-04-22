@@ -1,3 +1,27 @@
-<h1>About this Wiki</h1>
-<p>Wiki is a place for you to write and share your knowledge with the world.</p>
-<p>It's a simple and easy-to-use wiki platform that allows you to create and manage your own wiki pages.</p>
+<%= render 'shared/logo' %>
+
+<div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+  
+  <h1 style="text-align: center; margin-bottom: 20px;">About Quiki</h1>
+  
+  <div style="text-align: center; color: #666; margin-bottom: 40px;">
+    <p style="margin-bottom: 15px;">Quiki is a place for you to write and share your techno-nerd nonsense.</p>
+    <p>It's a simple and easy-to-use wiki platform that allows you to create and manage your own wiki pages.</p>
+  </div>
+
+  <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-top: 30px;">
+    <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Our Contributors</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+      <% @wiki_posts.contributors.each do |contributor| %>
+        <span style="background-color: #e9ecef; color: #495057; padding: 6px 12px; border-radius: 20px; font-size: 14px;">
+          <%= contributor.titleize %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <%= link_to 'Back to Home', root_path,
+        style: "background-color: #6c757d; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;" %>
+  </div>
+</div>

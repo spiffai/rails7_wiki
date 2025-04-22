@@ -1,4 +1,7 @@
-<div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+<%= render 'shared/logo' %>
+
+<div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+  
   <p style="color: green"><%= notice %></p>
 
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
@@ -12,6 +15,7 @@
       <thead>
         <tr style="background-color: #f8f9fa;">
           <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Title</th>
+          <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Author</th>
           <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Created At</th>
           <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Updated At</th>
         </tr>
@@ -23,6 +27,7 @@
               <%= link_to post.title, wiki_post_path(post), 
                   style: "color: #0d6efd; text-decoration: none;" %>
             </td>
+            <td style="padding: 12px; color: #666;"><%= post.author %></td>
             <td style="padding: 12px; color: #666;"><%= post.created_at.strftime('%B %d %Y') %></td>
             <td style="padding: 12px; color: #666;"><%= post.updated_at.strftime('%B %d %Y') %></td>
           </tr>
