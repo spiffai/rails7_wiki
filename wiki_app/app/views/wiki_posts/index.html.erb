@@ -1,26 +1,33 @@
-<p style="color: green"><%= notice %></p>
+<div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Wiki Posts</h1>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h1 style="margin: 0;">Quiki Posts</h1>
+    <%= link_to "Create Post", new_wiki_post_path, 
+        style: "background-color: #198754; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;" %>
+  </div>
 
-<div id="wiki_posts">
-    <table class="table" style="border: 1px solid #ccc">
-        <thead >
-            <tr>
-                <th>Title</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @wiki_posts.each do |post| %>
-                <tr>
-                    <td><%= link_to post.title, wiki_post_path(post), class: "text-blue-600 hover:text-blue-800" %></td>
-                    <td><%= post.created_at.strftime('%B %d %Y') %></td>
-                    <td><%= post.updated_at.strftime('%B %d %Y') %></td>
-                </tr>
-            <% end %>
-        </tbody>
+  <div id="wiki_posts">
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 4px;">
+      <thead>
+        <tr style="background-color: #f8f9fa;">
+          <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Title</th>
+          <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Created At</th>
+          <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Updated At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @wiki_posts.each do |post| %>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 12px;">
+              <%= link_to post.title, wiki_post_path(post), 
+                  style: "color: #0d6efd; text-decoration: none;" %>
+            </td>
+            <td style="padding: 12px; color: #666;"><%= post.created_at.strftime('%B %d %Y') %></td>
+            <td style="padding: 12px; color: #666;"><%= post.updated_at.strftime('%B %d %Y') %></td>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
+  </div>
 </div>
-
-<%= link_to "New wiki post", new_wiki_post_path %>
