@@ -2,13 +2,14 @@
 
 <h1>Wiki posts</h1>
 
-<div id="wiki_posts">
-  <% @wiki_posts.each do |wiki_post| %>
-    <%= render wiki_post %>
-    <p>
-      <%= link_to "Show this wiki post", wiki_post %>
-    </p>
-  <% end %>
+<div id="wiki_posts" class="mt-4">
+  <ul class="list-none">
+    <% @wiki_posts.each do |wiki_post| %>
+      <li class="mb-2">
+        <%= link_to wiki_post.title, wiki_post, class: "text-blue-600 hover:text-blue-800" %>
+      </li>
+    <% end %>
+  </ul>
 </div>
 
 <%= link_to "New wiki post", new_wiki_post_path %>
