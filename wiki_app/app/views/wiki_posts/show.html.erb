@@ -11,6 +11,10 @@
     <p>Written By <%= @wiki_post.author.titleize %></p>
   </div>
   <p class="post-body"><%= @wiki_post.description %></p>
+
+  <div class="post-content" style="margin: 30px 0; text-align: left;">
+    <%= sanitize @wiki_post.body %>
+  </div>
   <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
     <%= link_to "Edit Post", edit_wiki_post_path(@wiki_post), 
         class: "button button-primary" %>

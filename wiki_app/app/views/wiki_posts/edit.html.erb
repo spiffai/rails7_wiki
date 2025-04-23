@@ -20,6 +20,11 @@
       <%= form.text_area :description, style: "width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" %>
     </div>
 
+    <div style="margin-bottom: 20px;">
+      <%= form.label :body, style: "display: block; margin-bottom: 5px;" %>
+      <%= form.text_area :body, style: "width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" %>
+    </div>
+
     <div style="display: flex; justify-content: center; margin: 20px 0;">
       <%= form.submit "Update", class: "button button-primary" %>
     </div>
