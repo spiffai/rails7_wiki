@@ -1,10 +1,23 @@
-<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-  <h1 style="text-align: center;">Edit Post: <%= @wiki_post.title %></h1>
+<%= render 'shared/logo' %>
+
+<div style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
+  
+  <h1 style="text-align: center;">Edit Post: <%= @wiki_post.title.titleize %></h1>
   
   <%= form_with model: @wiki_post, local: true do |form| %>
     <div style="margin-bottom: 20px;">
       <%= form.label :title, style: "display: block; margin-bottom: 5px;" %>
       <%= form.text_field :title, style: "width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" %>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <%= form.label :author, style: "display: block; margin-bottom: 5px;" %>
+      <%= form.text_field :author, style: "width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" %>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <%= form.label :description, style: "display: block; margin-bottom: 5px;" %>
+      <%= form.text_area :description, style: "width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" %>
     </div>
 
     <div style="display: flex; justify-content: center; margin: 20px 0;">
