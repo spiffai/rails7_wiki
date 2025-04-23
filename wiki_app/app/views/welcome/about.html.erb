@@ -12,7 +12,7 @@
   <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-top: 30px;">
     <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Our Contributors</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-      <% @wiki_posts.contributors.each do |contributor| %>
+      <% @wiki_posts.contributors.compact.each do |contributor| %>
         <span style="background-color: #e9ecef; color: #495057; padding: 6px 12px; border-radius: 20px; font-size: 14px;">
           <%= contributor.titleize %>
         </span>
