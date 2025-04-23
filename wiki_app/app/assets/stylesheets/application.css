@@ -1,15 +1,101 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root {
+   /* Primary colors */
+   --color-primary: #3f8eab;
+   --color-primary-dark: #357797;
+   --color-secondary: #6c757d;
+   --color-secondary-dark: #5a6268;
+   --color-success: #198754;
+   --color-success-dark: #157347;
+   --color-danger: #8a1e40;
+   --color-danger-dark: #761834;
+
+   /* Text colors */
+   --color-text: #6c757d;
+   --color-text-light: #666;
+   --color-heading: #124f8c;
+
+   /* Background colors */
+   --color-bg: #f8f9fa;
+   --color-white: white;
+}
+
+body {
+   background-color: var(--color-bg);
+   color: var(--color-text);
+}
+
+h1 {
+   font-size: 1.78rem;
+   margin-bottom: 10px;
+   text-align: center;
+   color: var(--color-heading);
+}
+
+p {
+   text-align: center;
+   color: var(--color-text);
+}
+
+.container {
+   max-width: 600px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.notice {
+   color: var(--color-success);
+}
+
+.post-body {
+   text-align: center;
+   color: var(--color-text-light);
+}
+
+/* Base button styles */
+.button {
+   padding: 8px 16px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: background-color 0.2s ease;
+   text-decoration: none;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Button variations */
+.button-primary {
+   background-color: var(--color-primary);
+   color: var(--color-white);
+}
+
+.button-primary:hover {
+   background-color: var(--color-primary-dark);
+}
+
+.button-secondary {
+   background-color: var(--color-secondary);
+   color: var(--color-white);
+}
+
+.button-secondary:hover {
+   background-color: var(--color-secondary-dark);
+}
+
+.button-success {
+   background-color: var(--color-success);
+   color: var(--color-white);
+}
+
+.button-success:hover {
+   background-color: var(--color-success-dark);
+}
+
+.button-danger {
+   background-color: var(--color-danger);
+   color: var(--color-white);
+}
+
+.button-danger:hover {
+   background-color: var(--color-danger-dark);
+}
