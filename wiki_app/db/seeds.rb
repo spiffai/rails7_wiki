@@ -31,38 +31,61 @@ WikiPost.create!(
   title: 'RAG Concepts and Scalability',
   author: 'Martin Scorsese',
   description: 'RAG is stands for Retrieval-Augmented Generation.',
-  body: 'Retrieval-Augmented Generation (RAG) is a powerful approach that combines the strengths of large language models with the ability to access and utilize external knowledge.
+  body: '<p>Retrieval-Augmented Generation (RAG) is a powerful approach that combines the strengths of large language models with the ability to access and utilize external knowledge.</p>
 
-Key components of RAG:
-1. Document Collection: Gathering and organizing relevant documents
-2. Embedding Generation: Converting documents into vector representations
-3. Retrieval System: Finding relevant information based on queries
-4. Generation: Using retrieved information to generate accurate responses
+<h3>Key components of RAG:</h3>
+<ol>
+<li>Document Collection: Gathering and organizing relevant documents</li>
+<li>Embedding Generation: Converting documents into vector representations</li>
+<li>Retrieval System: Finding relevant information based on queries</li>
+<li>Generation: Using retrieved information to generate accurate responses</li>
+</ol>
 
-Scaling RAG systems requires careful consideration of:
-- Vector database selection
-- Chunking strategies
-- Embedding model choice
-- Caching mechanisms
-- Query optimization'
+<h3>Scaling RAG systems requires careful consideration of:</h3>
+<ul>
+<li>Vector database selection</li>
+<li>Chunking strategies</li>
+<li>Embedding model choice</li>
+<li>Caching mechanisms</li>
+<li>Query optimization</li>
+</ul>'
 )
 WikiPost.create!(
   title: 'AI Chat Bots in Rails',
   author: 'Quenten Tarantino',
   description: 'An AI chatbot that can answer questions based on a specific knowledge base is a valuable asset for organizations looking to automate customer interactions and improve overall user experiences.',
-  body: 'Implementing AI chatbots in Rails applications involves several key components and considerations:
+  body: '<p>Implementing AI chat bots in Rails applications requires careful consideration of several key aspects:</p>
 
-1. Model Integration:
-   - OpenAI API integration
-   - Hugging Face models
-   - Local model deployment
+<h3>1. Model Selection:</h3>
+<ul>
+<li>GPT-3.5/4</li>
+<li>Claude</li>
+<li>Local models</li>
+</ul>
 
-2. Conversation Management:
-   - Session handling
-   - Context preservation
-   - Message history
+<h3>2. Integration Approaches:</h3>
+<ul>
+<li>Direct API calls</li>
+<li>Queue-based processing</li>
+<li>Streaming responses</li>
+</ul>
 
-3. Rails Implementation:
+<h3>3. Key Features:</h3>
+<ul>
+<li>Real-time chat</li>
+<li>Message history</li>
+<li>Error handling</li>
+<li>Rate limiting</li>
+</ul>
+
+<h3>4. Security Considerations:</h3>
+<ul>
+<li>API key management</li>
+<li>User authentication</li>
+<li>Input validation</li>
+<li>Output sanitization</li>
+</ul>
+
 ```ruby
 class ChatController < ApplicationController
   def create
@@ -81,56 +104,75 @@ WikiPost.create!(
   title: 'What is Database Normalization?',
   author: 'Alyssa Glasco',
   description: 'Database Normalization is a framework for building microservices in Rails.',
-  body: 'Database normalization is a systematic approach to organizing database tables to minimize redundancy and dependency. It involves breaking down larger tables into smaller, more focused ones and establishing relationships between them.
+  body: '<p>Database normalization is a systematic approach to organizing database tables to minimize redundancy and dependency. It involves breaking down larger tables into smaller, more focused ones and establishing relationships between them.</p>
 
-The main normal forms are:
+<h3>The main normal forms are:</h3>
 
-1NF (First Normal Form):
-- Each table cell should contain a single value
-- Each record needs to be unique
+<h4>1NF (First Normal Form):</h4>
+<ul>
+<li>Each table cell should contain a single value</li>
+<li>Each record needs to be unique</li>
+</ul>
 
-2NF (Second Normal Form):
-- Must be in 1NF
-- All non-key attributes are fully dependent on the primary key
+<h4>2NF (Second Normal Form):</h4>
+<ul>
+<li>Must be in 1NF</li>
+<li>All non-key attributes are fully dependent on the primary key</li>
+</ul>
 
-3NF (Third Normal Form):
-- Must be in 2NF
-- No transitive dependencies
+<h4>3NF (Third Normal Form):</h4>
+<ul>
+<li>Must be in 2NF</li>
+<li>No transitive dependencies</li>
+</ul>
 
-Benefits:
-- Reduced data redundancy
-- Better data integrity
-- Easier maintenance
-- More efficient updates'
+<h3>Benefits:</h3>
+<ul>
+<li>Reduced data redundancy</li>
+<li>Better data integrity</li>
+<li>Easier maintenance</li>
+<li>More efficient updates</li>
+</ul>'
 )
 WikiPost.create!(
   title: 'MVC VS MVVM',
   author: 'Quenten Tarantino',
   description: 'MVC VS MVVM is a framework for building microservices in Rails.',
-  body: 'MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) are architectural patterns that help organize code in different ways.
+  body: '<p>MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) are architectural patterns that help organize code in different ways.</p>
 
-MVC Pattern:
-- Model: Data and business logic
-- View: User interface
-- Controller: Handles user input and updates model/view
+<h3>MVC Pattern:</h3>
+<ul>
+<li><strong>Model:</strong> Data and business logic</li>
+<li><strong>View:</strong> User interface</li>
+<li><strong>Controller:</strong> Handles user input and updates model/view</li>
+</ul>
 
-MVVM Pattern:
-- Model: Data and business logic
-- View: User interface
-- ViewModel: View state and behavior
+<h3>MVVM Pattern:</h3>
+<ul>
+<li><strong>Model:</strong> Data and business logic</li>
+<li><strong>View:</strong> User interface</li>
+<li><strong>ViewModel:</strong> View state and behavior</li>
+</ul>
 
-Key Differences:
-1. Controller vs ViewModel
-   - Controller: Direct user input handling
-   - ViewModel: Data binding and state management
+<h3>Key Differences:</h3>
 
-2. Data Flow:
-   - MVC: Bidirectional between components
-   - MVVM: More reactive, uses data binding
+<h4>1. Controller vs ViewModel</h4>
+<ul>
+<li>Controller: Direct user input handling</li>
+<li>ViewModel: Data binding and state management</li>
+</ul>
 
-3. Testing:
-   - MVC: Controller logic easily testable
-   - MVVM: ViewModel provides better isolation'
+<h4>2. Data Flow:</h4>
+<ul>
+<li>MVC: Bidirectional between components</li>
+<li>MVVM: More reactive, uses data binding</li>
+</ul>
+
+<h4>3. Testing:</h4>
+<ul>
+<li>MVC: Controller logic easily testable</li>
+<li>MVVM: ViewModel provides better isolation</li>
+</ul>'
 )
 WikiPost.create!(
   title: 'Localization for Your Rails app',
@@ -176,70 +218,66 @@ WikiPost.create!(
   title: 'S3 Storage and Architecture',
   author: 'Olivia Newton-John',
   description: 'S3 Storage and Architecture is a framework for building microservices in Rails.',
-  body: 'Amazon S3 (Simple Storage Service) is a scalable object storage service. Here\'s how to effectively use it in Rails:
+  body: '<p>Amazon S3 (Simple Storage Service) is a scalable object storage service. Here\'s how to effectively use it in Rails:</p>
 
-1. Configuration with Active Storage:
-```ruby
-# config/storage.yml
+<h3>1. Configuration with Active Storage:</h3>
+<pre><code class="language-ruby"># config/storage.yml
 amazon:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
   region: us-east-1
-  bucket: your-bucket-name
-```
+  bucket: your-bucket-name</code></pre>
 
-2. Key Concepts:
-- Buckets: Root containers
-- Objects: Files and metadata
-- Keys: Unique identifiers
-- URLs: Access points
+<h3>2. Key Concepts:</h3>
+<ul>
+<li><strong>Buckets:</strong> Root containers</li>
+<li><strong>Objects:</strong> Files and metadata</li>
+<li><strong>Keys:</strong> Unique identifiers</li>
+<li><strong>URLs:</strong> Access points</li>
+</ul>
 
-3. Best Practices:
-- Use appropriate bucket policies
-- Implement proper CORS settings
-- Enable versioning for critical data
-- Use CDN for better performance'
+<h3>3. Best Practices:</h3>
+<ul>
+<li>Use appropriate bucket policies</li>
+<li>Implement proper CORS settings</li>
+<li>Enable versioning for critical data</li>
+<li>Use CDN for better performance</li>
+</ul>'
 )
 WikiPost.create!(
   title: 'Caching Strategies for Your Rails App',
   author: 'Martin Scorsese',
   description: 'Caching Strategies for Your Rails App is a framework for building microservices in Rails.',
-  body: 'Effective caching is crucial for Rails application performance. Here are key caching strategies:
+  body: '<p>Effective caching is crucial for Rails application performance. Here are key caching strategies:</p>
 
-1. Page Caching:
-```ruby
-class HomeController < ApplicationController
+<h3>1. Page Caching:</h3>
+<pre><code class="language-ruby">class HomeController < ApplicationController
   caches_page :index
-end
-```
+end</code></pre>
 
-2. Fragment Caching:
-```erb
-<% cache product do %>
+<h3>2. Fragment Caching:</h3>
+<pre><code class="language-erb"><% cache product do %>
   <%= render product %>
-<% end %>
-```
+<% end %></code></pre>
 
-3. Russian Doll Caching:
-```erb
-<% cache ["v1", @post] do %>
+<h3>3. Russian Doll Caching:</h3>
+<pre><code class="language-erb"><% cache ["v1", @post] do %>
   <%= render @post.comments %>
-<% end %>
-```
+<% end %></code></pre>
 
-4. Low-Level Caching:
-```ruby
-Rails.cache.fetch("user-#{id}", expires_in: 12.hours) do
+<h3>4. Low-Level Caching:</h3>
+<pre><code class="language-ruby">Rails.cache.fetch("user-#{id}", expires_in: 12.hours) do
   User.expensive_query(id)
-end
-```
+end</code></pre>
 
-Best Practices:
-- Use appropriate cache keys
-- Set proper expiration times
-- Monitor cache hit rates
-- Consider cache warming strategies'
+<h3>Best Practices:</h3>
+<ul>
+<li>Use appropriate cache keys</li>
+<li>Set proper expiration times</li>
+<li>Monitor cache hit rates</li>
+<li>Consider cache warming strategies</li>
+</ul>'
 )
 WikiPost.create!(
   title: 'Best Practices for Rails Security',
@@ -285,34 +323,45 @@ WikiPost.create!(
   title: 'What is a Vector Database?',
   author: 'Olivia Newton-John',
   description: 'A vector database is a specialized database that stores and manages data represented as high-dimensional vectors, enabling efficient similarity searches and retrieval of related items.',
-  body: 'Vector databases are specialized systems designed to store and query high-dimensional vectors efficiently.
+  body: '<p>Vector databases are specialized systems designed to store and query high-dimensional vectors efficiently.</p>
 
-Key Components:
-1. Vector Embeddings:
-   - Numerical representations of data
-   - Generated by ML models
-   - High-dimensional spaces
+<h3>Key Components:</h3>
 
-2. Similarity Search:
-   - Cosine similarity
-   - Euclidean distance
-   - Approximate Nearest Neighbors (ANN)
+<h4>1. Vector Embeddings:</h4>
+<ul>
+<li>Numerical representations of data</li>
+<li>Generated by ML models</li>
+<li>High-dimensional spaces</li>
+</ul>
 
-3. Popular Solutions:
-   - Pinecone
-   - Weaviate
-   - Milvus
-   - FAISS
+<h4>2. Similarity Search:</h4>
+<ul>
+<li>Cosine similarity</li>
+<li>Euclidean distance</li>
+<li>Approximate Nearest Neighbors (ANN)</li>
+</ul>
 
-4. Use Cases:
-   - Semantic search
-   - Recommendation systems
-   - Image similarity
-   - Document retrieval
+<h4>3. Popular Solutions:</h4>
+<ul>
+<li>Pinecone</li>
+<li>Weaviate</li>
+<li>Milvus</li>
+<li>FAISS</li>
+</ul>
 
-Implementation Considerations:
-- Indexing strategies
-- Dimensionality reduction
-- Clustering approaches
-- Query optimization'
+<h4>4. Use Cases:</h4>
+<ul>
+<li>Semantic search</li>
+<li>Recommendation systems</li>
+<li>Image similarity</li>
+<li>Document retrieval</li>
+</ul>
+
+<h3>Implementation Considerations:</h3>
+<ul>
+<li>Indexing strategies</li>
+<li>Dimensionality reduction</li>
+<li>Clustering approaches</li>
+<li>Query optimization</li>
+</ul>'
 )
