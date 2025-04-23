@@ -7,7 +7,7 @@
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
     <h1 style="margin: 0;">Quiki Posts</h1>
     <%= link_to "Create Post", new_wiki_post_path, 
-        style: "background-color: #198754; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;" %>
+        class: "button button-primary" %>
   </div>
 
   <div id="wiki_posts">
@@ -25,11 +25,11 @@
           <tr style="border-bottom: 1px solid #ddd;">
             <td style="padding: 12px;">
               <%= link_to post.title, wiki_post_path(post), 
-                  style: "color: #0d6efd; text-decoration: none;" %>
+                  style: "color: #124f8c; text-decoration: none;" %>
             </td>
-            <td style="padding: 12px; color: #666;"><%= post.author %></td>
-            <td style="padding: 12px; color: #666;"><%= post.created_at.strftime('%B %d %Y') %></td>
-            <td style="padding: 12px; color: #666;"><%= post.updated_at.strftime('%B %d %Y') %></td>
+            <td style="padding: 12px; color: #3f8eab;"><%= post.author %></td>
+            <td style="padding: 12px; color: #3f8eab;"><%= post.created_at.strftime('%B %d %Y') %></td>
+            <td style="padding: 12px; color: #3f8eab;"><%= post.updated_at.strftime('%B %d %Y') %></td>
           </tr>
         <% end %>
       </tbody>

@@ -3,7 +3,7 @@
 <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
 
   
-  <h1 style="text-align: center; margin-bottom: 20px;">Quiki the Rails Wiki</h1>
+  <h1 style="text-align: center; margin-bottom: 20px;">Quiki</h1>
   
   <p style="text-align: center; color: #666; margin-bottom: 40px;">
     Quiki is a place for you to write and share your knowledge with the world about Rails, AI, and other technologist findings.
@@ -11,9 +11,9 @@
 
   <div style="display: flex; justify-content: center; gap: 20px;">
     <%= link_to 'About Quiki', welcome_about_path,
-        style: "background-color: #6c757d; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;" %>
+        class: "button button-secondary" %>
     
     <%= link_to 'View Posts', wiki_posts_path,
-        style: "background-color: #198754; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;" %>
+        class: "button button-primary" %>
   </div>
 </div>

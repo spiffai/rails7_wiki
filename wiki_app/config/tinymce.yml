@@ -1,0 +1,11 @@
+toolbar:
+  - undo redo | styles | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | link image
+plugins:
+  - image
+  - link
+  - lists
+  - code
+  - table
+  - paste
+height: 500
+menubar: false
